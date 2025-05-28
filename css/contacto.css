@@ -1,0 +1,80 @@
+.contacto-container {
+    padding: 40px 0;
+}
+
+.header-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-principal, #007bff);
+    letter-spacing: 1px;
+}
+
+.contacto-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.contacto-form {
+    flex: 1 1 320px;
+    max-width: 400px;
+    min-width: 260px;
+    background: #fff;
+    padding: 24px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px #0001;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.f-input input,
+.f-input textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.contacto-form button {
+    width: 100%;
+}
+
+.contacto-mapa {
+    flex: 1 1 260px;
+    max-width: 350px;
+    min-width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacto-mapa iframe {
+    width: 100%;
+    height: 220px;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0002;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .contacto-flex {
+        gap: 20px;
+    }
+    .contacto-form,
+    .contacto-mapa {
+        max-width: 100%;
+        min-width: 0;
+    }
+    .contacto-flex {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | HM Store</title>
+    <!-- FUENTE GOOGLE FONTS : Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- ICONS: Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- ICONS: Line Awesome -->
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <!-- Animaciones AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/img/logoM.png" type="image/x-icon">
+    <!-- Mis Estilos -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Estilos de contacto -->
+    <link rel="stylesheet" href="/css/contacto.css">
+</head>
+<body>
+    <div class="hm-wrapper">
+        <div data-include="/pages/partials/header.html"></div>
+
+        <div class="container contacto-container">
+            <h1 class="header-title">Contacto</h1>
+            <div class="contacto-flex">
+                <form class="contacto-form">
+                    <div class="f-input">
+                        <input type="text" name="nombre" placeholder="Nombre" required>
+                    </div>
+                    <div class="f-input">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="f-input">
+                        <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+                    </div>
+                    <button type="submit" class="hm-btn btn-primary uppercase">Enviar</button>
+                </form>
+                <div class="contacto-mapa">
+                    <iframe 
+                        src="https://www.google.com/maps?q=Lanús,+Buenos+Aires,+Argentina&output=embed"
+                        width="100%" height="220" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+
+        <div data-include="/pages/partials/footer.html"></div>
+    </div>
+    <script src="/js/include.js"></script>
+</body>
+</html>
