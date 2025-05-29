@@ -17,7 +17,7 @@
 
     <!-- Animaciones AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="shortcut icon" href="/img/logoM.png" type="image/x-icon">
     <!-- Mis Estilos -->
@@ -27,452 +27,356 @@
 <body>
 
     <div class="hm-wrapper">
+        <header>
+            <div data-include="/pages/partials/header.html"></div>
+        </header>
 
-        <!-- =================================
-        HEADER
-        ================================== -->  
-        <div data-include="/pages/partials/header.html"></div>
-
-
-        <!-- =================================
-        BANNER
-        ================================== -->
-        <div class="hm-banner">
-            <div class="img-banner">
-                <img src="img/img-banner.jpg" alt="">
-            </div>
-            <a href=""></a>
-        </div>
-
-        <!-- =================================
-        HOME CATEGROIAS
-        ================================== -->
-        <div class="hm-page-block">
-            <div class="container">
-                <div class="header-title">
-                    <h1  data-aos="fade-up" data-aos-duration="3000">Categorías</h1>
+        <main>
+            <!-- BANNER -->
+            <section class="hm-banner">
+                <div class="img-banner">
+                    <img src="img/img-banner.jpg" alt="">
                 </div>
+                <a href=""></a>
+            </section>
 
-                <div class="hm-grid-category">
-
-                    <div class="grid-item" data-aos="fade-up" data-aos-duration="1000">
-                        <a href="#">
-                            <img src="/img/c-1.jpg" alt="">
-                            <div class="c-info">
-                                <h3>Todo en calzado</h3>
-                            </div>
-                        </a>
+            <!-- HOME CATEGORÍAS -->
+            <section class="hm-page-block">
+                <div class="container">
+                    <div class="header-title">
+                        <h1 data-aos="fade-up" data-aos-duration="3000">Categorías</h1>
                     </div>
-
-                    <div class="grid-item" data-aos="fade-up" data-aos-duration="1500">
-                        <a href="#">
-                            <img src="/img/c-2.jpg" alt="">
-                            <div class="c-info">
-                                <h3>Todo a la moda</h3>
-                            </div>
-                        </a>
+                    <div class="hm-grid-category">
+                        <div class="grid-item" data-aos="fade-up" data-aos-duration="1000">
+                            <a href="#">
+                                <img src="/img/c-1.jpg" alt="">
+                                <div class="c-info">
+                                    <h3>Todo en calzado</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="grid-item" data-aos="fade-up" data-aos-duration="1500">
+                            <a href="#">
+                                <img src="/img/c-2.jpg" alt="">
+                                <div class="c-info">
+                                    <h3>Todo a la moda</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="grid-item" data-aos="fade-up" data-aos-duration="2000">
+                            <a href="#">
+                                <img src="/img/c-3.jpg" alt="">
+                                <div class="c-info">
+                                    <h3>Lo mejor en tecnología</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="grid-item" data-aos="fade-up" data-aos-duration="2000">
+                            <a href="#">
+                                <img src="/img/c-4.jpg" alt="">
+                                <div class="c-info">
+                                    <h3>Accesorios</h3>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-
-                    <div class="grid-item" data-aos="fade-up" data-aos-duration="2000">
-                        <a href="#">
-                            <img src="/img/c-3.jpg" alt="">
-                            <div class="c-info">
-                                <h3>Lo mejor en tecnología</h3>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="grid-item" data-aos="fade-up" data-aos-duration="2000">
-                        <a href="#">
-                            <img src="/img/c-4.jpg" alt="">
-                            <div class="c-info">
-                                <h3>Accesorios</h3>
-                            </div>
-                        </a>
-                    </div>
-
                 </div>
+            </section>
 
-            </div>
-        </div>
-
-
-        <!-- =================================
-        HOME PRODUCTOS DESTACADOS
-        ================================== -->
-        <div class="hm-page-block bg-fondo">
-
-            <div class="container">
-
-                <div class="header-title" data-aos="fade-up">
-                    <h1>Productos populares</h1>
-                </div>
-
-                <!-- TABS -->
-                <ul class="hm-tabs" data-aos="fade-up">
-                    <li class="hm-tab-link">
-                        Zapatillas
-                    </li>
-
-                    <li class="hm-tab-link ">
-                        Moda
-                    </li>
-
-                    <li class="hm-tab-link ">
-                        Tecnología
-                    </li>
-
-                    <li class="hm-tab-link ative">
-                        En oferta
-                    </li>
-
-                </ul>
-
-                <!-- CONTENIDO DE LOS TABS -->
-                <!-- Zapatillas -->
-                <div class="tabs-content" data-aos="fade-up">
-
-                    <div class="grid-product">
-
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="/img/1.jpg" alt="">
-                                </a>
-                                <span class="stin stin-new">Nuevo</span>
-                            </div>
-
-                            <div class="p-info">
-                                <a href=""> <h3>Quisque vulputate aliquam</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-
-                        </div>
-
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="/img/3.jpg" alt="">
-                                </a>
-                            </div>
-
-                            <div class="p-info">
-                                <a href=""> <h3>Praesent nibh lorem, tempus quis est a</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-
-                        </div>
-
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="/img/1.jpg" alt="">
-                                </a>
-                            </div>
-
-                            <div class="p-info">
-                                <a href=""> <h3>Nunc sit amet justo nec ipsum dolor.</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-
-                        </div>
-
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="/img/3.jpg" alt="">
-                                </a>
-                                <span class="stin stin-new">Nuevo</span>
-                            </div>
-
-                            <div class="p-info">
-                                <a href=""> <h3>Lorem ipsum dolor sit, amet consectetur</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-
-                        </div>
-
+            <!-- HOME PRODUCTOS DESTACADOS -->
+            <section class="hm-page-block bg-fondo">
+                <div class="container">
+                    <div class="header-title" data-aos="fade-up">
+                        <h1>Productos populares</h1>
                     </div>
 
-                </div>
+                    <!-- TABS -->
+                    <ul class="hm-tabs" data-aos="fade-up">
+                        <li class="hm-tab-link">Zapatillas</li>
+                        <li class="hm-tab-link">Moda</li>
+                        <li class="hm-tab-link">Tecnología</li>
+                        <li class="hm-tab-link ative">En oferta</li>
+                    </ul>
 
-                <!-- Moda -->
-                <div class="tabs-content" data-aos="fade-up">
-
-                    <div class="grid-product">
-
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="/img/2.jpg" alt="">
-                                </a>
-                                <span class="stin stin-new">Nuevo</span>
-                            </div>
-
-                            <div class="p-info">
-                                <a href=""> <h3>Quisque vulputate aliquam</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
+                    <!-- CONTENIDO DE LOS TABS -->
+                    <!-- Zapatillas -->
+                    <div class="tabs-content" data-aos="fade-up">
+                        <div class="grid-product">
+                            <div class="product-item">
+                                <div class="p-portada">
+                                    <a href="">
+                                        <img src="/img/1.jpg" alt="">
+                                    </a>
+                                    <span class="stin stin-new">Nuevo</span>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-
-                        </div>
-
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="/img/4.jpg" alt="">
-                                </a>
-                                <span class="stin stin-new">Nuevo</span>
-                            </div>
-
-                            <div class="p-info">
-                                <a href=""> <h3>Praesent nibh lorem, tempus quis est a</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
+                                <div class="p-info">
+                                    <a href=""><h3>Quisque vulputate aliquam</h3></a>
+                                    <div class="precio">
+                                        <span>S/ 00.00</span>
+                                    </div>
+                                    <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
                             </div>
-
-                        </div>
-
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="/img/5.jpg" alt="">
-                                </a>
-                            </div>
-
-                            <div class="p-info">
-                                <a href=""> <h3>Nunc sit amet justo nec ipsum dolor.</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
+                            <div class="product-item">
+                                <div class="p-portada">
+                                    <a href="">
+                                        <img src="/img/3.jpg" alt="">
+                                    </a>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-
-                        </div>
-
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="/img/7.jpg" alt="">
-                                </a>
-                            </div>
-
-                            <div class="p-info">
-                                <a href=""> <h3>Lorem ipsum dolor sit, amet consectetur</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
+                                <div class="p-info">
+                                    <a href=""><h3>Praesent nibh lorem, tempus quis est a</h3></a>
+                                    <div class="precio">
+                                        <span>S/ 00.00</span>
+                                    </div>
+                                    <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
                             </div>
-
+                            <div class="product-item">
+                                <div class="p-portada">
+                                    <a href="">
+                                        <img src="/img/1.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="p-info">
+                                    <a href=""><h3>Nunc sit amet justo nec ipsum dolor.</h3></a>
+                                    <div class="precio">
+                                        <span>S/ 00.00</span>
+                                    </div>
+                                    <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="p-portada">
+                                    <a href="">
+                                        <img src="/img/3.jpg" alt="">
+                                    </a>
+                                    <span class="stin stin-new">Nuevo</span>
+                                </div>
+                                <div class="p-info">
+                                    <a href=""><h3>Lorem ipsum dolor sit, amet consectetur</h3></a>
+                                    <div class="precio">
+                                        <span>S/ 00.00</span>
+                                    </div>
+                                    <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                </div>
+                            </div>
                         </div>
-
                     </div>
 
-                </div>
-
-                <!-- Tecnología -->
-                <div class="tabs-content" data-aos="fade-up">
-
-                    <div class="grid-product">
-
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="/img/c-3.jpg" alt="">
-                                </a>
-                                <span class="stin stin-new">Nuevo</span>
-                            </div>
-
-                            <div class="p-info">
-                                <a href=""> <h3>Quisque vulputate aliquam</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
+                    <!-- Moda -->
+                    <div class="tabs-content" data-aos="fade-up">
+                        <div class="grid-product">
+                            <div class="product-item">
+                                <div class="p-portada">
+                                    <a href="">
+                                        <img src="/img/2.jpg" alt="">
+                                    </a>
+                                    <span class="stin stin-new">Nuevo</span>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-
-                        </div>
-
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="/img/c-4.jpg" alt="">
-                                </a>
-                            </div>
-
-                            <div class="p-info">
-                                <a href=""> <h3>Praesent nibh lorem, tempus quis est a</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
+                                <div class="p-info">
+                                    <a href=""><h3>Quisque vulputate aliquam</h3></a>
+                                    <div class="precio">
+                                        <span>S/ 00.00</span>
+                                    </div>
+                                    <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
                             </div>
-
-                        </div>
-
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="/img/c-3.jpg" alt="">
-                                </a>
-                            </div>
-
-                            <div class="p-info">
-                                <a href=""> <h3>Nunc sit amet justo nec ipsum dolor.</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
+                            <div class="product-item">
+                                <div class="p-portada">
+                                    <a href="">
+                                        <img src="/img/4.jpg" alt="">
+                                    </a>
+                                    <span class="stin stin-new">Nuevo</span>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-
-                        </div>
-
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="/img/c-4.jpg" alt="">
-                                </a>
-                            </div>
-
-                            <div class="p-info">
-                                <a href=""> <h3>Lorem ipsum dolor sit, amet consectetur</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
+                                <div class="p-info">
+                                    <a href=""><h3>Praesent nibh lorem, tempus quis est a</h3></a>
+                                    <div class="precio">
+                                        <span>S/ 00.00</span>
+                                    </div>
+                                    <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
                             </div>
-
+                            <div class="product-item">
+                                <div class="p-portada">
+                                    <a href="">
+                                        <img src="/img/5.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="p-info">
+                                    <a href=""><h3>Nunc sit amet justo nec ipsum dolor.</h3></a>
+                                    <div class="precio">
+                                        <span>S/ 00.00</span>
+                                    </div>
+                                    <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="p-portada">
+                                    <a href="">
+                                        <img src="/img/7.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="p-info">
+                                    <a href=""><h3>Lorem ipsum dolor sit, amet consectetur</h3></a>
+                                    <div class="precio">
+                                        <span>S/ 00.00</span>
+                                    </div>
+                                    <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                </div>
+                            </div>
                         </div>
-
                     </div>
 
-                </div>
-
-                <!-- En oferta -->
-                <div class="tabs-content" data-aos="fade-up">
-
-                    <div class="grid-product">
-
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="/img/1.jpg" alt="">
-                                </a>
-                                <span class="stin stin-oferta">Oferta</span>
-                            </div>
-
-                            <div class="p-info">
-                                <a href=""> <h3>Quisque vulputate aliquam</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                    <span class="thash">S/ 00.00</span>
+                    <!-- Tecnología -->
+                    <div class="tabs-content" data-aos="fade-up">
+                        <div class="grid-product">
+                            <div class="product-item">
+                                <div class="p-portada">
+                                    <a href="">
+                                        <img src="/img/c-3.jpg" alt="">
+                                    </a>
+                                    <span class="stin stin-new">Nuevo</span>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-
-                        </div>
-
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="/img/2.jpg" alt="">
-                                </a>
-                                <span class="stin stin-oferta">Oferta</span>
-                            </div>
-
-                            <div class="p-info">
-                                <a href=""> <h3>Praesent nibh lorem, tempus quis est a</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                    <span class="thash">S/ 00.00</span>
+                                <div class="p-info">
+                                    <a href=""><h3>Quisque vulputate aliquam</h3></a>
+                                    <div class="precio">
+                                        <span>S/ 00.00</span>
+                                    </div>
+                                    <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
                             </div>
-
-                        </div>
-
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="/img/7.jpg" alt="">
-                                </a>
-                                <span class="stin stin-oferta">Oferta</span>
-                            </div>
-
-                            <div class="p-info">
-                                <a href=""> <h3>Nunc sit amet justo nec ipsum dolor.</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-
-                                    <span class="thash">S/ 00.00</span>
+                            <div class="product-item">
+                                <div class="p-portada">
+                                    <a href="">
+                                        <img src="/img/c-4.jpg" alt="">
+                                    </a>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-
-                        </div>
-
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="/img/8.jpg" alt="">
-                                </a>
-                                <span class="stin stin-oferta">Oferta</span>
-                            </div>
-
-                            <div class="p-info">
-                                <a href=""> <h3>Lorem ipsum dolor sit, amet consectetur</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                    <span class="thash">S/ 00.00</span>
+                                <div class="p-info">
+                                    <a href=""><h3>Praesent nibh lorem, tempus quis est a</h3></a>
+                                    <div class="precio">
+                                        <span>S/ 00.00</span>
+                                    </div>
+                                    <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
                                 </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
                             </div>
-
+                            <div class="product-item">
+                                <div class="p-portada">
+                                    <a href="">
+                                        <img src="/img/c-3.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="p-info">
+                                    <a href=""><h3>Nunc sit amet justo nec ipsum dolor.</h3></a>
+                                    <div class="precio">
+                                        <span>S/ 00.00</span>
+                                    </div>
+                                    <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="p-portada">
+                                    <a href="">
+                                        <img src="/img/c-4.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="p-info">
+                                    <a href=""><h3>Lorem ipsum dolor sit, amet consectetur</h3></a>
+                                    <div class="precio">
+                                        <span>S/ 00.00</span>
+                                    </div>
+                                    <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                </div>
+                            </div>
                         </div>
-
                     </div>
 
+                    <!-- En oferta -->
+                    <div class="tabs-content" data-aos="fade-up">
+                        <div class="grid-product">
+                            <div class="product-item">
+                                <div class="p-portada">
+                                    <a href="">
+                                        <img src="/img/1.jpg" alt="">
+                                    </a>
+                                    <span class="stin stin-oferta">Oferta</span>
+                                </div>
+                                <div class="p-info">
+                                    <a href=""><h3>Quisque vulputate aliquam</h3></a>
+                                    <div class="precio">
+                                        <span>S/ 00.00</span>
+                                        <span class="thash">S/ 00.00</span>
+                                    </div>
+                                    <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="p-portada">
+                                    <a href="">
+                                        <img src="/img/2.jpg" alt="">
+                                    </a>
+                                    <span class="stin stin-oferta">Oferta</span>
+                                </div>
+                                <div class="p-info">
+                                    <a href=""><h3>Praesent nibh lorem, tempus quis est a</h3></a>
+                                    <div class="precio">
+                                        <span>S/ 00.00</span>
+                                        <span class="thash">S/ 00.00</span>
+                                    </div>
+                                    <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="p-portada">
+                                    <a href="">
+                                        <img src="/img/7.jpg" alt="">
+                                    </a>
+                                    <span class="stin stin-oferta">Oferta</span>
+                                </div>
+                                <div class="p-info">
+                                    <a href=""><h3>Nunc sit amet justo nec ipsum dolor.</h3></a>
+                                    <div class="precio">
+                                        <span>S/ 00.00</span>
+                                        <span class="thash">S/ 00.00</span>
+                                    </div>
+                                    <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="p-portada">
+                                    <a href="">
+                                        <img src="/img/8.jpg" alt="">
+                                    </a>
+                                    <span class="stin stin-oferta">Oferta</span>
+                                </div>
+                                <div class="p-info">
+                                    <a href=""><h3>Lorem ipsum dolor sit, amet consectetur</h3></a>
+                                    <div class="precio">
+                                        <span>S/ 00.00</span>
+                                        <span class="thash">S/ 00.00</span>
+                                    </div>
+                                    <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </section>
+        </main>
 
-            </div>
-
-        </div>
-
-        <!-- =================================
-        FOOTER
-        ================================== -->
-    </div> 
-    <div data-include="/pages/partials/footer.html"></div>
+        <footer>
+            <div data-include="/pages/partials/footer.html"></div>
+        </footer>
+    </div>
 
     <!-- Llamada a footer/header dinamico-->
     <script src="/js/include.js"></script>
     <!-- Animaciones : AOS-->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-    <!-- Mi Script -->
-
-    <script>  
+    <script>
         AOS.init({
             duration: 1200,
         })
     </script>
-
+    
 </body>
 </html>
