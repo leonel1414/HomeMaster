@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseñas | HM Store</title>
+    <!-- FUENTE GOOGLE FONTS : Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- ICONS: Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- ICONS: Line Awesome -->
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <!-- Animaciones AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/img/logoM.png" type="image/x-icon">
+    <!-- Mis Estilos -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Estilos de reseñas -->
+    <link rel="stylesheet" href="/css/resenias.css">
+</head>
+<body>
+        <div class="hm-wrapper">
+        <div data-include="/pages/partials/header.html"></div>
+        
+        <main class="carrito-container container" style="padding: 2rem 0;">
+            <h1 class="header-title">Tu Carrito</h1>
+
+            <ul id="lista-carrito" class="carrito-lista" style="list-style: none; padding: 0;"></ul>
+
+            <p id="total-carrito" class="carrito-total" style="font-weight: bold; font-size: 1.2rem; margin-top: 1rem;"></p>
+
+            <button id="vaciar-carrito" class="hm-btn btn-danger" style="margin-top: 1rem;">Vaciar carrito</button>
+        </main>
+
+        <div data-include="/pages/partials/footer.html"></div>
+    <script src="/js/include.js"></script>
+    <script src="/js/carrito.js"></script>
+
+</body>
+</html>

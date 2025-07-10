@@ -32,11 +32,11 @@
         </header>
 
         <main>
-            <section class="productos-section">
+           <!-- <section class="productos-section">
                 <div class="container">
                     <h1 class="header-title">Nuestros Productos</h1>
                     <div class="productos-flex">
-                        <!-- Card 1 -->
+                        
                         <div class="producto-card">
                             <img src="/img/1.jpg" alt="Producto 1">
                             <h2>Zapatillas Urbanas</h2>
@@ -44,7 +44,7 @@
                             <span class="precio">$12.000</span>
                             <button class="hm-btn btn-primary">Agregar al carrito</button>
                         </div>
-                        <!-- Card 2 -->
+                        
                         <div class="producto-card">
                             <img src="/img/2.jpg" alt="Producto 2">
                             <h2>Campera Deportiva</h2>
@@ -52,7 +52,7 @@
                             <span class="precio">$18.500</span>
                             <button class="hm-btn btn-primary">Agregar al carrito</button>
                         </div>
-                        <!-- Card 3 -->
+                        
                         <div class="producto-card">
                             <img src="/img/a-1.avif" alt="Producto 3">
                             <h2>Auriculares Bluetooth</h2>
@@ -60,7 +60,7 @@
                             <span class="precio">$7.900</span>
                             <button class="hm-btn btn-primary">Agregar al carrito</button>
                         </div>
-                        <!-- Card 4 -->
+                        
                         <div class="producto-card">
                             <img src="/img/a-2.jpg" alt="Producto 4">
                             <h2>Mochila Urbana</h2>
@@ -68,7 +68,7 @@
                             <span class="precio">$9.200</span>
                             <button class="hm-btn btn-primary">Agregar al carrito</button>
                         </div>
-                        <!-- Card 5 -->
+                        
                         <div class="producto-card">
                             <img src="/img/c-4.jpg" alt="Producto 5">
                             <h2>Smartwatch</h2>
@@ -78,13 +78,26 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
+
+
+                <section class="productos-section">
+                    <div class="container">
+                        <h1 class="header-title">Nuestros Producto</h1>
+                            <div class="productos-flex" id="api-productos">
+                            <!-- Cada producto será insertado aquí -->
+                            </div>
+                    </div>
+                </section>
         </main>
 
         <footer>
             <div data-include="/pages/partials/footer.html"></div>
         </footer>
     </div>
+    
     <script src="/js/include.js"></script>
+    <script src="/js/producto.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </body>
 </html>
