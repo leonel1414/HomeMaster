@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
         carrito.forEach(producto => {
             const key = producto.nombre;
             if (!agrupado[key]) {
-                agrupado[key] = { ...producto, cantidad: 1 };
+                agrupado[key] = { ...producto };
             } else {
-                agrupado[key].cantidad++;
+                agrupado[key].cantidad += producto.cantidad || 1;
             }
         });
         return Object.values(agrupado);
@@ -61,29 +61,37 @@ document.addEventListener("DOMContentLoaded", () => {
         totalCarrito.textContent = `Total: $${total.toFixed(2)}`;
         btnVaciar.style.display = "inline-block";
 
-        // Eventos dinámicos
         agregarEventosBotones();
+        actualizarContadorCarrito();
     }
 
     function agregarEventosBotones() {
-        // +
         document.querySelectorAll(".btn-aumentar").forEach(btn => {
             btn.addEventListener("click", e => {
                 const nombre = e.target.getAttribute("data-nombre");
-                const producto = carrito.find(p => p.nombre === nombre);
-                carrito.push({ ...producto });
+                const index = carrito.findIndex(p => p.nombre === nombre);
+                if (index !== -1) {
+                    carrito[index].cantidad = (carrito[index].cantidad || 1) + 1;
+                } else {
+                    // Esto no debería pasar si se renderizó
+                    return;
+                }
                 localStorage.setItem("carrito", JSON.stringify(carrito));
                 renderCarrito();
             });
         });
 
-        // -
         document.querySelectorAll(".btn-disminuir").forEach(btn => {
             btn.addEventListener("click", e => {
                 const nombre = e.target.getAttribute("data-nombre");
                 const index = carrito.findIndex(p => p.nombre === nombre);
                 if (index !== -1) {
-                    carrito.splice(index, 1);
+                    const item = carrito[index];
+                    if (item.cantidad && item.cantidad > 1) {
+                        item.cantidad--;
+                    } else {
+                        carrito.splice(index, 1);
+                    }
                     localStorage.setItem("carrito", JSON.stringify(carrito));
                     renderCarrito();
                 }
@@ -91,14 +99,23 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Vaciar carrito completo
     btnVaciar.addEventListener("click", () => {
         localStorage.removeItem("carrito");
+        actualizarContadorCarrito();
         location.reload();
     });
 
-    // Render inicial
+    function actualizarContadorCarrito() {
+        const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+        const total = carrito.reduce((acc, item) => acc + (item.cantidad || 1), 0);
+        const contador = document.querySelector(".hm-icon-cart span") || document.querySelector(".hm-cart span");
+        if (contador) {
+            contador.textContent = total;
+        }
+    }
+
     renderCarrito();
+    actualizarContadorCarrito();
 });
 
 const btnComprar = document.getElementById("comprar-carrito");
@@ -116,7 +133,7 @@ btnComprar.addEventListener("click", () => {
         return;
     }
 
-    const total = carrito.reduce((sum, p) => sum + p.precio, 0);
+    const total = carrito.reduce((sum, p) => sum + (p.precio * (p.cantidad || 1)), 0);
 
     Swal.fire({
         icon: 'success',
