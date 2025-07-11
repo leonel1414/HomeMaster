@@ -30,57 +30,58 @@
         <header>
             <div data-include="/pages/partials/header.html"></div>
         </header>
-
-        <main>
-            <!-- BANNER -->
-            <section class="hm-banner">
-                <div class="img-banner">
-                    <img src="img/img-banner.jpg" alt="">
-                </div>
-                <a href=""></a>
-            </section>
-
-            <!-- HOME CATEGORÍAS -->
-            <section class="hm-page-block">
-
-                <div class="container">
-                    <div class="header-title">
-                        <h1 data-aos="fade-up" data-aos-duration="3000">Categorías</h1>
-                    </div>
-                    <div id="categorias-dinamicas" class="hm-grid-category">
-                        <!-- Categorías se cargarán dinámicamente aquí -->
-                    </div>
-                </div>
-            </section>
-
-            <!-- HOME PRODUCTOS DESTACADOS -->
-            <section class="hm-page-block bg-fondo">
-                <div class="container">
-                    <div class="header-title" data-aos="fade-up">
-                        <h1>Productos populares</h1>
-                    </div>
-
-                    <div class="container">
-                        <!-- TABS -->
-                        <ul class="hm-tabs" data-aos="fade-up">
-                            <li class="hm-tab-link active" data-tab="moda_hombre">Moda Hombre</li>
-                            <li class="hm-tab-link" data-tab="moda_mujer">Moda Mujer</li>
-                            <li class="hm-tab-link" data-tab="tecnologia">Tecnología</li>
-                            <li class="hm-tab-link" data-tab="oferta">En oferta</li>
-                        </ul>
-
-                        <!-- CONTENIDO DE LOS TABS -->
-                        <div class="tabs-content" data-aos="fade-up">
-                            <div class="grid-product" id="tab-moda-hombre"></div>
-                            <div class="grid-product" id="tab-moda-mujer" style="display:none;"></div>
-                            <div class="grid-product" id="tab-tecnologia" style="display:none;"></div>
-                            <div class="grid-product" id="tab-oferta" style="display:none;"></div>
+            <main>
+                <!-- BANNER -->
+                <div>                    
+                    <section class="hm-banner">
+                        <div class="img-banner">
+                            <img src="img/img-banner.jpg" alt="">
                         </div>
-                    </div>
-                </div>
-            </section>
-        </main>
+                        <a href=""></a>
+                    </section>
 
+                                <!-- HOME CATEGORÍAS -->
+                    <section class="hm-page-block">
+                        <div class="container">
+                            <div class="header-title">
+                                <h1 data-aos="fade-up" data-aos-duration="3000">Categorías</h1>
+                            </div>
+                            <div id="categorias-dinamicas" class="hm-grid-category">
+                                <!-- Categorías se cargarán dinámicamente aquí -->
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- TABS -->
+                        <section class="hm-tabs-section">
+                            <div class="container">
+                                <div class="header-title">
+                                    <h1 data-aos="fade-up" data-aos-duration="3000">Productos populares</h1>
+                                </div>
+                            </div>
+                            <div class="hm-tabs-container">
+                                <div class="hm-tabs-content">
+                                    <ul class="hm-tabs" data-aos="fade-up">
+                                        <li class="hm-tab-link active" data-tab="zapatillas">Hombres</li>
+                                        <li class="hm-tab-link" data-tab="moda">Moda</li>
+                                        <li class="hm-tab-link" data-tab="tecnologia">Tecnología</li>
+                                        <li class="hm-tab-link" data-tab="oferta">En oferta</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                            <!-- CONTENIDO DE LOS TABS -->
+                        <section class="hm-page-block bg-fondo">
+                            <div class="container">
+                                <div id="zapatillas" class="tabs-content tab-active" data-aos="fade-up"></div>
+                                <div id="moda" class="tabs-content" data-aos="fade-up" style="display:none;"></div>
+                                <div id="tecnologia" class="tabs-content" data-aos="fade-up" style="display:none;"></div>
+                                <div id="oferta" class="tabs-content" data-aos="fade-up" style="display:none;"></div>
+                            </div>
+                        </section>
+            </main>
+        <!-- Footer -->
         <footer>
             <div data-include="/pages/partials/footer.html"></div>
         </footer>

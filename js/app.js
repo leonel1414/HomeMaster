@@ -13,33 +13,29 @@ window.addEventListener('scroll',()=>{
 /*=========================================
     Tabs
 ==========================================*/
-if (document.querySelector('.hm-tabs')) {
-    const tabLinks = document.querySelectorAll('.hm-tab-link');
-    const tabContainers = document.querySelectorAll('.grid-product');
+if(document.querySelector('.hm-tabs')){
 
-    tabLinks.forEach(tab => {
-        tab.addEventListener('click', () => {
-            const target = tab.dataset.tab;
-            
-            // Desactivar todos
-            tabLinks.forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
+    const tabLinks=document.querySelectorAll('.hm-tab-link');
+    const tabsContent=document.querySelectorAll('.tabs-content');
 
-            tabContainers.forEach(container => {
-                container.style.display = 'none';
-            });
+    tabLinks[0].classList.add('active');
 
-            const targetContainer = document.getElementById(`tab-${target}`);
-            if (targetContainer) {
-                targetContainer.style.display = 'grid';
-            }
-        });
-    });
-
-    // Activar primer tab por defecto
-    if (tabLinks.length > 0) {
-        tabLinks[0].click(); // Simula un clic inicial
+    if(document.querySelector('.tabs-content')){
+        tabsContent[0].classList.add('tab-active');
     }
+    
+    for (let i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].addEventListener('click',()=>{
+            tabLinks.forEach((tab) => tab.classList.remove('active'));
+            tabLinks[i].classList.add('active');
+            
+            tabsContent.forEach((tabCont) => tabCont.classList.remove('tab-active'));
+            tabsContent[i].classList.add('tab-active');
+            
+        });
+        
+    }
+
 }
 
 /*=========================================
