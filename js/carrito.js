@@ -43,13 +43,16 @@ document.addEventListener("DOMContentLoaded", () => {
             li.innerHTML = `
                 <img src="${producto.imagen}" alt="${producto.nombre}" style="width: 60px; border-radius: 8px;">
                 <div style="flex-grow: 1;">
-                    <p style="margin: 0; font-weight: bold;">${producto.nombre} - x${producto.cantidad}</p>
+                    <p style="margin: 0; font-weight: bold;">
+                        ${producto.nombre}
+                        <span style="color: red; font-size: 0.9rem; margin-left: 0.5rem;">x${producto.cantidad}</span>
+                    </p>
+                    <p style="margin: 0;">Precio unitario: $${producto.precio.toFixed(2)}</p>
                     <p style="margin: 0;">Subtotal: $${subtotal.toFixed(2)}</p>
                 </div>
                 <div style="display: flex; align-items: center; gap: 0.3rem;">
                     <button class="btn-disminuir" data-nombre="${producto.nombre}" style="padding: 0.3rem;">➖</button>
                     <button class="btn-aumentar" data-nombre="${producto.nombre}" style="padding: 0.3rem;">➕</button>
-                    <button class="eliminar-producto hm-btn btn-danger" data-nombre="${producto.nombre}">Eliminar</button>
                 </div>
             `;
             listaCarrito.appendChild(li);
@@ -63,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function agregarEventosBotones() {
-        // ➕
+        // +
         document.querySelectorAll(".btn-aumentar").forEach(btn => {
             btn.addEventListener("click", e => {
                 const nombre = e.target.getAttribute("data-nombre");
@@ -74,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
-        // ➖
+        // -
         document.querySelectorAll(".btn-disminuir").forEach(btn => {
             btn.addEventListener("click", e => {
                 const nombre = e.target.getAttribute("data-nombre");
@@ -84,16 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     localStorage.setItem("carrito", JSON.stringify(carrito));
                     renderCarrito();
                 }
-            });
-        });
-
-        // Eliminar todos de ese tipo
-        document.querySelectorAll(".eliminar-producto").forEach(btn => {
-            btn.addEventListener("click", e => {
-                const nombre = e.target.getAttribute("data-nombre");
-                carrito = carrito.filter(p => p.nombre !== nombre);
-                localStorage.setItem("carrito", JSON.stringify(carrito));
-                renderCarrito();
             });
         });
     }
@@ -106,4 +99,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Render inicial
     renderCarrito();
+});
+
+const btnComprar = document.getElementById("comprar-carrito");
+
+btnComprar.addEventListener("click", () => {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    if (carrito.length === 0) {
+        Swal.fire({
+            icon: 'info',
+            title: 'Carrito vacío',
+            text: 'Agregá productos antes de realizar una compra.',
+            confirmButtonText: 'OK'
+        });
+        return;
+    }
+
+    const total = carrito.reduce((sum, p) => sum + p.precio, 0);
+
+    Swal.fire({
+        icon: 'success',
+        title: '¡Compra exitosa!',
+        html: `<p>Tu compra fue realizada con éxito.</p><p><strong>Total: $${total.toFixed(2)}</strong></p>`,
+        confirmButtonText: 'Aceptar'
+    }).then(() => {
+        localStorage.removeItem("carrito");
+        location.reload();
+    });
 });

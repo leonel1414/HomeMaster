@@ -16,26 +16,31 @@
     <link rel="shortcut icon" href="/img/logoM.png" type="image/x-icon">
     <!-- Mis Estilos -->
     <link rel="stylesheet" href="/css/style.css">
-    <!-- Estilos de reseñas -->
-    <link rel="stylesheet" href="/css/resenias.css">
+
 </head>
 <body>
         <div class="hm-wrapper">
-        <div data-include="/pages/partials/header.html"></div>
-        
-        <main class="carrito-container container" style="padding: 2rem 0;">
-            <h1 class="header-title">Tu Carrito</h1>
+            <header>
+                <div data-include="/pages/partials/header.html"></div>
+            </header>
 
-            <ul id="lista-carrito" class="carrito-lista" style="list-style: none; padding: 0;"></ul>
+            <main class="carrito-container container" style="padding: 2rem 0;">
+                <h1 class="header-title">Tu Carrito</h1>
 
-            <p id="total-carrito" class="carrito-total" style="font-weight: bold; font-size: 1.2rem; margin-top: 1rem;"></p>
+                <ul id="lista-carrito" class="carrito-lista" style="list-style: none; padding: 0;"></ul>
 
-            <button id="vaciar-carrito" class="hm-btn btn-danger" style="margin-top: 1rem;">Vaciar carrito</button>
-        </main>
+                <p id="total-carrito" class="carrito-total" style="font-weight: bold; font-size: 1.2rem; margin-top: 1rem;"></p>
 
-        <div data-include="/pages/partials/footer.html"></div>
-    <script src="/js/include.js"></script>
-    <script src="/js/carrito.js"></script>
+                <button id="vaciar-carrito" class="hm-btn btn-primary" style="margin-top: 1rem;">Vaciar carrito</button>
+                <button id="comprar-carrito" class="hm-btn btn-success">Comprar</button>
+            </main>
 
+            <footer>
+                <div data-include="/pages/partials/footer.html"></div>
+            </footer>
+        </div>
+        <script src="/js/include.js"></script>
+        <script src="/js/carrito.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

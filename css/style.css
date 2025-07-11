@@ -3,6 +3,7 @@
     --color-principal: #FF5A5F;
     --color-primary-hover:#d64246;
     --color-verde:#04A75B;
+    --color-verde-hover:#3ed78c;
     --color-negro: #444A47;
     --color-fondo: #F7F9FD;
     --color-footer: #151515;
@@ -88,6 +89,18 @@ img{
     color: #fff;
     border-radius: 25px;
     text-align: center;
+}
+
+.btn-success{
+    background: var(--color-verde);
+    color: #fff;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.btn-success:hover{
+    background: var(--color-verde-hover);
+    color: #fff;
 }
 
 .btn-primary:hover{
